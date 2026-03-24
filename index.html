@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jiale Wang | Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Saira+Extra+Condensed:wght@400;600;700&display=swap"
+    rel="stylesheet" />
+  <!-- Favicon: solid-color circle with "JW" -->
+  <link
+    rel="icon"
+    type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20128%20128'%3E%3Cdefs%3E%3CradialGradient%20id='g'%20cx='30%25'%20cy='25%25'%20r='85%25'%3E%3Cstop%20offset='0%25'%20stop-color='%232a6a98'/%3E%3Cstop%20offset='100%25'%20stop-color='%230f3d5e'/%3E%3C/radialGradient%3E%3Cfilter%20id='s'%20x='-20%25'%20y='-20%25'%20width='140%25'%20height='140%25'%3E%3CfeDropShadow%20dx='0'%20dy='2'%20stdDeviation='3'%20flood-color='%23000000'%20flood-opacity='0.25'/%3E%3C/filter%3E%3C/defs%3E%3Ccircle%20cx='64'%20cy='64'%20r='58'%20fill='url(%23g)'%20filter='url(%23s)'/%3E%3Ctext%20x='64'%20y='64'%20text-anchor='middle'%20dominant-baseline='central'%20font-family='Saira%20Extra%20Condensed,%20system-ui,%20-apple-system,%20Segoe%20UI,%20Roboto,%20Arial'%20font-size='62'%20font-weight='700'%20letter-spacing='2'%20fill='%23ffffff'%3EJW%3C/text%3E%3C/svg%3E" />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%20viewBox='0%200%20128%20128'%3E%3Cdefs%3E%3CradialGradient%20id='g'%20cx='30%25'%20cy='25%25'%20r='85%25'%3E%3Cstop%20offset='0%25'%20stop-color='%232a6a98'/%3E%3Cstop%20offset='100%25'%20stop-color='%230f3d5e'/%3E%3C/radialGradient%3E%3C/defs%3E%3Ccircle%20cx='64'%20cy='64'%20r='58'%20fill='url(%23g)'/%3E%3Ctext%20x='64'%20y='64'%20text-anchor='middle'%20dominant-baseline='central'%20font-family='Saira%20Extra%20Condensed,%20system-ui,%20-apple-system,%20Segoe%20UI,%20Roboto,%20Arial'%20font-size='72'%20font-weight='700'%20letter-spacing='2'%20fill='%23ffffff'%3EJW%3C/text%3E%3C/svg%3E" />
+  
+  <style>
+    :root {
+      --sidebar-bg: #0f3d5e;
+      --sidebar-text: #e8f1f8;
+      --accent: #d67b2c;
+      --accent-dark: #a85e20;
+      --body-text: #2f2f2f;
+      --muted: #6a6a6a;
+      --section-rule: #e5e5e5;
+      --content-bg: #fbfaf8;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--body-text);
+      background: radial-gradient(circle at top right, #f5efe8 0%, #fbfaf8 45%, #ffffff 100%);
+      font-family: "Merriweather", Georgia, serif;
+      line-height: 1.65;
+    }
+
+    .layout {
+      min-height: 100vh;
+      display: flex;
+    }
+
+    .sidebar {
+      width: 320px;
+      flex-shrink: 0;
+      background: linear-gradient(160deg, var(--sidebar-bg) 0%, #1f567d 100%);
+      color: var(--sidebar-text);
+      position: fixed;
+      inset: 0 auto 0 0;
+      padding: 2rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .avatar {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      border: 5px solid rgba(255, 255, 255, 0.35);
+      background: linear-gradient(145deg, #f8f8f8, #d8d8d8);
+      display: grid;
+      place-items: center;
+      margin-bottom: 1.25rem;
+      font-family: "Saira Extra Condensed", sans-serif;
+      font-size: 3rem;
+      color: #30506c;
+      letter-spacing: 0.06em;
+      font-weight: 700;
+    }
+
+    .name {
+      margin: 0;
+      font-family: "Saira Extra Condensed", sans-serif;
+      font-size: 2.4rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      line-height: 1;
+    }
+
+    .role {
+      margin-top: 0.3rem;
+      margin-bottom: 1.7rem;
+      font-size: 0.95rem;
+      color: #cbe0f0;
+    }
+
+    .nav {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      width: 100%;
+    }
+
+    .nav a {
+      color: rgba(232, 241, 248, 0.92);
+      text-decoration: none;
+      font-family: "Saira Extra Condensed", sans-serif;
+      font-size: 1.2rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: color 0.2s ease, transform 0.2s ease;
+    }
+
+    .nav a:hover,
+    .nav a:focus-visible {
+      color: #ffffff;
+      transform: translateX(2px);
+      outline: none;
+    }
+
+    .content {
+      margin-left: 320px;
+      width: calc(100% - 320px);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.65), var(--content-bg));
+    }
+
+    section {
+      min-height: auto;
+      padding: 2.8rem 4rem;
+      border-bottom: 1px solid var(--section-rule);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      animation: riseIn 0.6s ease both;
+    }
+
+    @keyframes riseIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+
+    h1 {
+      font-family: "Saira Extra Condensed", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin: 0;
+      line-height: 1.05;
+      font-size: clamp(2.7rem, 5.2vw, 5.7rem);
+    }
+
+    h2 {
+      font-family: "Saira Extra Condensed", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin: 0;
+      line-height: 1.05;
+      font-size: clamp(2rem, 3.2vw, 3.3rem);
+      margin-bottom: 1.4rem;
+    }
+
+    h3 {
+      font-family: "Saira Extra Condensed", sans-serif;
+      letter-spacing: 0.04em;
+      margin: 0;
+      line-height: 1.05;
+      font-size: clamp(1.35rem, 2.2vw, 2rem);
+      margin-bottom: 0.35rem;
+    }
+
+    .accent {
+      color: var(--accent);
+    }
+
+    .subhead {
+      color: var(--muted);
+      letter-spacing: 0.03em;
+      margin-top: 0.4rem;
+      margin-bottom: 1.8rem;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+    }
+
+    .lead {
+      max-width: 880px;
+      font-size: 1.04rem;
+    }
+
+    .contact {
+      font-size: 0.95rem;
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+
+    .contact a {
+      color: var(--accent-dark);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+    }
+
+    .entry {
+      margin-bottom: 1.35rem;
+    }
+
+    .row-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+    }
+
+    .date {
+      color: var(--accent);
+      font-family: "Saira Extra Condensed", sans-serif;
+      font-size: 1.1rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .org {
+      color: var(--muted);
+      font-family: "Saira Extra Condensed", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      font-size: 1.05rem;
+      margin-bottom: 0.6rem;
+    }
+
+    ul {
+      margin: 0.4rem 0 0;
+      padding-left: 1.1rem;
+    }
+
+    li {
+      margin-bottom: 0.3rem;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+      margin-top: 0.8rem;
+    }
+
+    .chip {
+      border: 1px solid #d4d4d4;
+      background: #ffffff;
+      padding: 0.3rem 0.65rem;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      color: #4d4d4d;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+      margin: 0.35rem 0 1rem;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      border-radius: 999px;
+      padding: 0.34rem 0.68rem;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      background: #fff;
+      border: 1px solid #e0e0e0;
+      color: #484848;
+    }
+
+    .badge-group {
+      margin: 0.2rem 0 1rem;
+    }
+
+    .badge-group h4 {
+      margin: 0 0 0.4rem;
+      font-family: "Saira Extra Condensed", sans-serif;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      font-size: 1.05rem;
+      color: #3f3f3f;
+    }
+
+    .skills-icon-wall {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(72px, 1fr));
+      gap: 0.85rem;
+      max-width: 900px;
+    }
+
+    .skill-icon-cell {
+      height: 72px;
+      border: 1px solid #e2e2e2;
+      border-radius: 14px;
+      background: #ffffff;
+      display: grid;
+      place-items: center;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .skill-icon-cell:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+    }
+
+    .skill-icon {
+      width: 34px;
+      height: 34px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .project-link {
+      color: var(--accent-dark);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .project-desc {
+      margin-top: 0.55rem;
+      margin-bottom: 0;
+      max-width: 980px;
+    }
+
+    .hl {
+      color: #b25f1c;
+      font-weight: 700;
+    }
+
+    .accent-note {
+      color: #0f3d5e;
+      font-style: italic;
+      text-decoration: underline;
+      text-decoration-color: rgba(15, 61, 94, 0.35);
+      text-underline-offset: 3px;
+    }
+
+    .project-link:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 1080px) {
+      .sidebar {
+        width: 100%;
+        position: static;
+        min-height: auto;
+        padding: 1.5rem 1rem;
+      }
+
+      .layout {
+        display: block;
+      }
+
+      .content {
+        margin-left: 0;
+        width: 100%;
+      }
+
+      .avatar {
+        width: 92px;
+        height: 92px;
+        font-size: 2rem;
+        margin-bottom: 0.7rem;
+      }
+
+      .name {
+        font-size: 1.8rem;
+      }
+
+      .role {
+        margin-bottom: 1rem;
+      }
+
+      .nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.7rem 1rem;
+      }
+
+      .nav a {
+        font-size: 1rem;
+      }
+
+      section {
+        min-height: auto;
+        padding: 2rem 1.2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <img class="avatar" src="./avatar.jpg" alt="Jiale Wang portrait" />
+      <p class="name">Jiale Wang</p>
+      <p class="role">B.S. Candidate in CS · HUST</p>
+      <nav class="nav" aria-label="Resume sections">
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <!-- <a href="#leadership">Leadership</a> -->
+        <a href="#honors">Honors</a>
+      </nav>
+    </aside>
+
+    <main class="content">
+      <section id="about">
+        <h1>Jiale <span class="accent">Wang</span></h1>
+        <p class="contact">
+          Hongshan District, Wuhan · +86 153-9156-0195 ·
+          <a href="mailto:chia.le@foxmail.com">chia.le@foxmail.com</a>
+        </p>
+        <p class="lead">
+          I am a third-year B.S. candidate in Computer Science and Technology at <strong>Huazhong University of Science
+            and Technology (HUST)</strong>, with an expected graduation in 2027.
+          My research interests include <strong>AI</strong>, <strong>agent systems</strong>, and <strong>large language models
+            (LLMs)</strong>.
+          I am currently preparing for recommendation-based postgraduate admission and aim to pursue long-term,
+          research-driven work on impactful problems.
+        </p>
+      </section>
+
+      <section id="education">
+        <h2>Education 🎓</h2>
+        <article class="entry">
+          <div class="row-head">
+            <h3>Huazhong University of Science and Technology (HUST)</h3>
+            <span class="date">Sep 2023 - Present</span>
+          </div>
+          <div class="org">B.S. Candidate in Computer Science and Technology</div>
+          <ul>
+            <li><strong>Average Score:</strong> 92.5</li>
+            <li><strong>Rank:</strong> 11 / 442 (Top 2.5%)</li>
+            <li><strong>English Proficiency:</strong> CET-4: 594, CET-6: 517</li>
+            <li><strong>Key Courses:</strong> C Programming (99), Discrete Mathematics (96), Algorithm Analysis and
+              Design (92), Computer Systems (97), Computer Organization (93), Computer Vision (96), C++ (91), Machine
+              Learning (100), Deep Learning (98)</li>
+          </ul>
+        </article>
+      </section>
+
+      <section id="skills">
+        <h2>Skills 🛠️</h2>
+        <article class="entry">
+          <div class="skills-icon-wall">
+            <div class="skill-icon-cell"><img class="skill-icon" src="https://github.com/get-icon/geticon/raw/master/icons/react.svg" alt="React" loading="lazy" /></div>
+            <div class="skill-icon-cell"><img class="skill-icon" src="https://github.com/get-icon/geticon/raw/master/icons/vue.svg" alt="Vue" loading="lazy" /></div>
+            <div class="skill-icon-cell"><img class="skill-icon" src="https://github.com/get-icon/geticon/raw/master/icons/typescript-icon.svg" alt="TypeScript" loading="lazy" /></div>
+            <div class="skill-icon-cell"><img class="skill-icon" src="https://github.com/get-icon/geticon/raw/master/icons/javascript.svg" alt="JavaScript" loading="lazy" /></div>
+            <div class="skill-icon-cell"><img class="skill-icon" src="https://github.com/get-icon/geticon/raw/master/icons/html-5.svg" alt="HTML5" loading="lazy" /></div>
+            <div class="skill-icon-cell"><img class="skill-icon" src="https://github.com/get-icon/geticon/raw/master/icons/css-3.svg" alt="CSS3" loading="lazy" /></div>
+            <div class="skill-icon-cell"><img class="skill-icon" src="https://github.com/get-icon/geticon/raw/master/icons/bootstrap.svg" alt="Bootstrap" loading="lazy" /></div>
+            <div class="skill-icon-cell"><img class="skill-icon" src="https://github.com/get-icon/geticon/raw/master/icons/git-icon.svg" alt="Git" loading="lazy" /></div>
+            <div class="skill-icon-cell"><img class="skill-icon" src="https://github.com/get-icon/geticon/raw/master/icons/nodejs-icon.svg" alt="Node.js" loading="lazy" /></div>
+            <div class="skill-icon-cell"><img class="skill-icon" src="https://github.com/get-icon/geticon/raw/master/icons/npm.svg" alt="NPM" loading="lazy" /></div>
+            <div class="skill-icon-cell"><img class="skill-icon" src="https://github.com/get-icon/geticon/raw/master/icons/docker-icon.svg" alt="Docker" loading="lazy" /></div>
+            <div class="skill-icon-cell"><img class="skill-icon" src="https://github.com/get-icon/geticon/raw/master/icons/cloudflare.svg" alt="Cloudflare" loading="lazy" /></div>
+            <div class="skill-icon-cell"><img class="skill-icon" src="https://github.com/get-icon/geticon/raw/master/icons/mysql.svg" alt="MySQL" loading="lazy" /></div>
+            <div class="skill-icon-cell"><img class="skill-icon" src="https://github.com/get-icon/geticon/raw/master/icons/mongodb-icon.svg" alt="MongoDB" loading="lazy" /></div>
+            <div class="skill-icon-cell"><img class="skill-icon" src="https://github.com/get-icon/geticon/raw/master/icons/python.svg" alt="Python" loading="lazy" /></div>
+            <div class="skill-icon-cell"><img class="skill-icon" src="https://github.com/get-icon/geticon/raw/master/icons/pandas-icon.svg" alt="Pandas" loading="lazy" /></div>
+            <div class="skill-icon-cell"><img class="skill-icon" src="https://github.com/get-icon/geticon/raw/master/icons/numpy-icon.svg" alt="NumPy" loading="lazy" /></div>
+            <div class="skill-icon-cell"><img class="skill-icon" src="https://github.com/get-icon/geticon/raw/master/icons/jupyter.svg" alt="Jupyter" loading="lazy" /></div>
+            <div class="skill-icon-cell"><img class="skill-icon" src="https://github.com/get-icon/geticon/raw/master/icons/tensorflow.svg" alt="TensorFlow" loading="lazy" /></div>
+            <div class="skill-icon-cell"><img class="skill-icon" src="https://github.com/get-icon/geticon/raw/master/icons/pytorch.svg" alt="PyTorch" loading="lazy" /></div>
+            <div class="skill-icon-cell"><img class="skill-icon" src="https://github.com/get-icon/geticon/raw/master/icons/opencv.svg" alt="OpenCV" loading="lazy" /></div>
+            <div class="skill-icon-cell"><img class="skill-icon" src="https://github.com/get-icon/geticon/raw/master/icons/threejs.svg" alt="Three.js" loading="lazy" /></div>
+            <div class="skill-icon-cell"><img class="skill-icon" src="https://github.com/get-icon/geticon/raw/master/icons/markdown.svg" alt="Markdown" loading="lazy" /></div>
+            <div class="skill-icon-cell"><img class="skill-icon" src="https://github.com/get-icon/geticon/raw/master/icons/github.svg" alt="GitHub" loading="lazy" /></div>
+            <div class="skill-icon-cell"><img class="skill-icon" src="https://github.com/get-icon/geticon/raw/master/icons/java.svg" alt="Java" loading="lazy" /></div>
+            <div class="skill-icon-cell"><img class="skill-icon" src="https://github.com/get-icon/geticon/raw/master/icons/c.svg" alt="C" loading="lazy" /></div>
+            <div class="skill-icon-cell"><img class="skill-icon" src="https://github.com/get-icon/geticon/raw/master/icons/c-plusplus.svg" alt="C++" loading="lazy" /></div>
+            <div class="skill-icon-cell"><img class="skill-icon" src="https://github.com/get-icon/geticon/raw/master/icons/visual-studio-code.svg" alt="VS Code" loading="lazy" /></div>
+            <div class="skill-icon-cell"><img class="skill-icon" src="https://github.com/get-icon/geticon/raw/master/icons/hugo-icon.svg" alt="Hugo" loading="lazy" /></div>
+            <div class="skill-icon-cell"><img class="skill-icon" src="https://github.com/get-icon/geticon/raw/master/icons/wordpress-icon.svg" alt="WordPress" loading="lazy" /></div>
+          </div>
+        </article>
+      </section>
+
+      <section id="projects">
+        <h2>Projects 🔬</h2>
+
+        <article class="entry">
+          <div class="row-head">
+            <h3>Intelligent Agent Design and Deployment for Healthcare</h3>
+            <span class="date">Apr 2025 - May 2025</span>
+          </div>
+          <div class="org">Project Lead</div>
+          <p class="project-desc">I led the end-to-end development of a healthcare-oriented intelligent agent system. I designed a lightweight <strong>AgentOS</strong> framework (Plan/Tool/Memory/Action), integrated a medical RAG pipeline with vector retrieval, cross-encoder reranking, and hybrid search for low-frequency terminology, and implemented ReAct-style reasoning with self-reflection checks to reduce hallucination risk. I also delivered a unified function-calling orchestration layer for multi-tool collaboration, including symptom parsing, exam knowledge retrieval, and hospital resource matching. The resulting system was <span class="hl">more reliable, explainable, and deployment-ready</span> for real clinical scenarios.</p>
+        </article>
+
+        <article class="entry">
+          <div class="row-head">
+            <h3>Heterogeneous Resource-Aware Distributed Agent System</h3>
+            <span class="date">Jun 2025 - Sep 2025</span>
+          </div>
+          <div class="org">Core Member</div>
+          <p class="project-desc">As a core contributor, I helped decompose agent workflows into fine-grained tasks and compile them into heterogeneous DAGs across GPU, CPU, and I/O resources. I integrated a HACS-style scheduler that places tasks based on compute, memory, and communication characteristics rather than coarse agent-level rules. On a 32-node A100 cluster, the system achieved up to <strong>6.2x</strong> throughput improvement and a <strong>71.2%</strong> reduction in P95 tail latency, with GPU memory utilization improved by <strong>2x+</strong>. For dynamic workflows, P95 latency was reduced by <strong>22.3%</strong> vs. Ray and <strong>47.8%</strong> vs. AutoGen. I also led external API standardization and benchmark evaluation on GAIA, tau-bench, and OpenAGI, supporting a co-authored <strong><em>OSDI 2026</em></strong> submission and open-source impact of <span class="hl">400+ GitHub stars</span>.</p>
+          <p><a class="project-link" href="https://github.com/maze-agent/Maze" target="_blank" rel="noreferrer">GitHub:
+              maze-agent/Maze</a></p>
+        </article>
+
+        <article class="entry">
+          <div class="row-head">
+            <h3>Weakly Supervised Fine-Grained Recognition (National First Prize)</h3>
+            <span class="date">Oct 2025 - Nov 2025</span>
+          </div>
+          <div class="org">Project Lead</div>
+          <p class="project-desc">I designed and led a two-stage, cross-architecture knowledge distillation pipeline, where a fine-tuned ConvNeXtV2 teacher supervised a DINOv2 student under a joint KL-divergence and GCE objective. With AdamW optimization, cosine annealing, and DDP multi-GPU training, the model achieved <strong>97.3%</strong> accuracy on WebFG-400 and <strong>90.6%</strong> on WebiNat-5000. This work earned a <span class="accent-note">National First Prize</span> and demonstrated that a carefully engineered training strategy can deliver both <span class="hl">strong generalization</span> and <span class="hl">state-of-the-art competitive performance</span>.</p>
+        </article>
+      </section>
+
+      <!-- <section id="leadership">
+        <h2>Leadership 🤝</h2>
+        <article class="entry">
+          <ul>
+              <li>Communist Youth League Secretary, CS.BSB.2301, HUST (Sep 2023 - Jun 2024)
+              </li>
+              <li>Class President, CS.BSB.2301, HUST (Sep 2024 - Present)</li>
+            <li>Deputy Minister, Organization Department, School of Computer Science Youth League Committee (Sep 2024 -
+              Jun 2025)</li>
+          </ul>
+        </article>
+      </section> -->
+
+      <section id="honors">
+        <h2>Honors 🏅</h2>
+        <article class="entry">
+          <ul>
+            <li>Merit Student and National Encouragement Scholarship (Sep 2024, Sep 2025)</li>
+            <li>Outstanding Communist Youth League Member (May 2024, May 2025)</li>
+            <li>Huawei Scholarship (Nov 2025)</li>
+            <li>HUST Outstanding Undergraduate (Dec 2025)</li>
+          </ul>
+        </article>
+      </section>
+    </main>
+  </div>
+</body>
+
+</html>
