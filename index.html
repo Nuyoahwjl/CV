@@ -446,7 +446,7 @@
     <aside class="sidebar">
       <img class="avatar" src="./assets/avatar.jpg" alt="Jiale Wang portrait" />
       <p class="name">Jiale Wang</p>
-      <p class="role">B.S. Candidate in CS · HUST</p>
+      <p class="role">Undergraduate in CS · HUST</p>
       <nav class="nav" aria-label="Resume sections">
         <a href="#about">About</a>
         <a href="#education">Education</a>
@@ -465,13 +465,9 @@
           <a href="mailto:chia.le@foxmail.com">chia.le@foxmail.com</a>
         </p>
         <p class="lead">
-          I am a third-year B.S. candidate in Computer Science and Technology at <strong>Huazhong University of Science
-            and Technology (HUST)</strong>, with an expected graduation in 2027.
-          My research interests include <strong>AI</strong>, <strong>agent systems</strong>, and <strong>large language
-            models
-            (LLMs)</strong>.
-          I am currently preparing for recommendation-based postgraduate admission and aim to pursue long-term,
-          research-driven work on impactful problems.
+          I am a third-year undergraduate in Computer Science and Technology at <strong>Huazhong University of Science and Technology (HUST)</strong>, with an expected graduation in 2027.
+          My research interests include <strong>AI</strong>, <strong>agent</strong>, and <strong>large language models(LLMs)</strong>.
+          I am currently preparing for recommendation-based postgraduate admission and aim to pursue long-term, research-driven work on impactful problems.
         </p>
       </section>
 
@@ -482,7 +478,7 @@
             <h3>Huazhong University of Science and Technology (HUST)</h3>
             <span class="date">Sep 2023 - Present</span>
           </div>
-          <div class="org">B.S. Candidate in Computer Science and Technology</div>
+          <div class="org">Undergraduate in Computer Science and Technology</div>
           <ul>
             <li><strong>Average Score:</strong> 92.5</li>
             <li><strong>Rank:</strong> 11 / 442 (Top 2.5%)</li>
@@ -571,13 +567,15 @@
             <span class="date">Apr 2025 - May 2025</span>
           </div>
           <div class="org">Project Lead</div>
-          <p class="project-desc">I led the end-to-end development of a healthcare-oriented intelligent agent system. I
-            designed a lightweight <strong>AgentOS</strong> framework (Plan/Tool/Memory/Action), integrated a medical
-            RAG pipeline with vector retrieval, cross-encoder reranking, and hybrid search for low-frequency
-            terminology, and implemented ReAct-style reasoning with self-reflection checks to reduce hallucination risk.
-            I also delivered a unified function-calling orchestration layer for multi-tool collaboration, including
-            symptom parsing, exam knowledge retrieval, and hospital resource matching. The resulting system was <span
-              class="hl">more reliable, explainable, and deployment-ready</span> for real clinical scenarios.</p>
+          <p class="project-desc">I led the end-to-end development of a healthcare-oriented multi-agent system. I designed a
+            lightweight <strong>AgentOS</strong> framework (Plan/Tool/Memory/Action) extended with inter-agent messaging and
+            shared context, and built a hybrid RAG pipeline combining BM25 sparse retrieval, dense vector search, and RRF
+            fusion with query decomposition, medical synonym expansion, and <strong>bge-reranker-v2-m3</strong> two-stage
+            reranking. I architected a Coordinator + four-specialist-agent workflow (symptom analysis, risk assessment,
+            recommendation generation, safety validation) with a self-reflection loop for iterative correction, alongside a
+            rule-based safety guardrail engine for contraindication detection and citation tracking that traces every
+            recommendation back to a retrieved document or clinical guideline. The resulting system is <span
+              class="hl">grounded, auditable, and deployment-ready</span> for real clinical scenarios.</p>
         </article>
 
         <article class="entry">
@@ -616,19 +614,6 @@
           </p>
         </article>
       </section>
-
-      <!-- <section id="leadership">
-        <h2>Leadership 🤝</h2>
-        <article class="entry">
-          <ul>
-              <li>Communist Youth League Secretary, CS.BSB.2301, HUST (Sep 2023 - Jun 2024)
-              </li>
-              <li>Class President, CS.BSB.2301, HUST (Sep 2024 - Present)</li>
-            <li>Deputy Minister, Organization Department, School of Computer Science Youth League Committee (Sep 2024 -
-              Jun 2025)</li>
-          </ul>
-        </article>
-      </section> -->
 
       <section id="honors">
         <h2>Honors 🏅</h2>
